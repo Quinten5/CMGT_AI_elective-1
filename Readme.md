@@ -1,12 +1,14 @@
-## AI Elective | Unity & MLAgents
+# AI Elective | Unity & MLAgents
 
-> Welcome to the Unity & MLAgents workshop. In this workshop we will set up and play around with MLAgents in Unity. 
+> Welcome to the Unity & MLAgents workshop. In this workshop we will set up and play around with MLAgents in Unity. This tutorial is based on Unity's own tutorial at https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Getting-Started.md
 
-# What is MLAgents?
+## What is MLAgents?
 
 > MLAgents is a framework you can use on top of Unity that allows you to teach your so-called Agent how to behave in your Unity environment. Behind the scenes, it uses Reinforcement Learning to reward desired behaviour (for example: scoring a goal in a soccer game), while punishing undesired behaviour (for example, scoring an own goal in a soccer game, or letting the other team score). 
 
-# Getting Started // Requirements
+## Getting Started 
+
+### Setting up the environment
 
 In order to get started, several things are needed:
 
@@ -25,4 +27,7 @@ Now, after installing anaconda, run the program `anaconda powershell prompt`. Th
 5. `pip3 install protobuf==3.20`
 6. `mlagents-learn --help`
 
-At this point, you should see the mlagents help text
+At this point, you should see the mlagents help text. This should be enough to get started in Unity!
+
+### Creating a Unity Scene
+
