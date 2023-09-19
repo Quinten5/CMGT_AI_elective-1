@@ -51,7 +51,9 @@ At this point, you should see the mlagents help text. This should be enough to g
 
 To make things easier, you can download the initial scene setup from (this) github:
 
-> ```git clone https://github.com/StevenWarmelink/CMGT_AI_elective.git```
+```
+git clone https://github.com/StevenWarmelink/CMGT_AI_elective.git
+```
 
 Open up the newly downloaded unity scene. It should look roughly like this:
 
