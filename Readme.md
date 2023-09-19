@@ -55,7 +55,7 @@ To make things easier, you can download the initial scene setup from (this) gith
 git clone https://github.com/StevenWarmelink/CMGT_AI_elective.git
 ```
 
-Open up the newly downloaded unity scene. It should look roughly like this:
+Open up the newly downloaded unity scene, it's under Assets > BigArena. It should look roughly like this:
 
 ![](./imgs/unity_scene.png)
 
