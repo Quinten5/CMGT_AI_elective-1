@@ -31,3 +31,7 @@ At this point, you should see the mlagents help text. This should be enough to g
 
 ### Creating a Unity Scene
 
+To make things easier, you can download the initial scene setup from (this) github:
+
+> `git clone https://github.com/StevenWarmelink/CMGT_AI_elective.git`
+
