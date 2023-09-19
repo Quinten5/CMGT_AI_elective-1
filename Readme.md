@@ -35,3 +35,16 @@ To make things easier, you can download the initial scene setup from (this) gith
 
 > `git clone https://github.com/StevenWarmelink/CMGT_AI_elective.git`
 
+Open up the newly downloaded unity scene. It should look roughly like this:
+
+![](./imgs/unity_scene.png)
+
+Now, in the directory where you downloaded or cloned the git repository, you should find a folder named `ML_agents`. This folder should contain a file called `trainer_config.yaml`, which is our main configuration file for the reinforcement training process. 
+
+Now, navigate to this folder in your conda environment using `cd ML_agents`. You can start the training using the following command:
+
+`mlagents-learn trainer_config.yaml --run-id=myFirstRun`. In this case `trainer_config.yaml` contains the configuration for our reinforcement learning model, and `myFirstRun` is the name / identifier that we use for this training session. After running the command, you should see something like this:
+
+![](./imgs/mlagents_learn.png)
+
+That means your setup is all correct! You can now begin training by pressing the 'play' button in Unity itself. 

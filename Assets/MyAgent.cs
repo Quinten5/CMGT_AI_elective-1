@@ -52,7 +52,7 @@ public class MyAgent : Agent
         epoch += 1;
         if (epoch > n_steps_per_run)
         {
-            AddReward(-.5f);
+            AddReward(0f);
             EndEpisode();
         }
         this.transform.Rotate(0f, actionBuffers.ContinuousActions[1] * 2, 0f);
@@ -69,21 +69,21 @@ public class MyAgent : Agent
         switch(collision.gameObject.tag)
         {
             case "GoodPellet":
-                AddReward(20f);
+                AddReward(0f);
                 Destroy(collision.gameObject);
                 break;
             case "BadPellet":
-                AddReward(-20f);
+                AddReward(0f);
                 Destroy(collision.gameObject);
                 break;
             case "Wall":
-                AddReward(-50f);
+                AddReward(0f);
                 transform.localPosition = Vector3.zero;
                 GameManager.Instance.spawn_pellets();
                 EndEpisode();
                 break;
             case "Target":
-                AddReward(100f);
+                AddReward(0f);
                 GameManager.Instance.spawn_pellets();
                 EndEpisode();
                 break;
