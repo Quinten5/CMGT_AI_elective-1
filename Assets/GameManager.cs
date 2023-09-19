@@ -28,9 +28,12 @@ public class GameManager : MonoBehaviour
     [Range(1, 50)]
     public int arena_extents = 1;
 
-    [Range(1, 50)]
-    public int n_pickups = 15;
+    [Range(0, 50)]
+    public int n_pickups_good = 15;
     
+    [Range(0, 50)]
+    public int n_pickups_bad  = 15;
+
     private List<GameObject> good_pellets = new List<GameObject>();
     private List<GameObject> bad_pellets = new List<GameObject>();
 
@@ -84,9 +87,12 @@ public class GameManager : MonoBehaviour
     {
         destroy_old_pellets();
 
-        for (int idx = 0; idx < n_pickups; idx++)
+        for (int idx = 0; idx < n_pickups_good; idx++)
         {
             spawn_pellet(pickup_good, good_pellets);
+        }
+        for (int idx = 0; idx < n_pickups_bad; idx++)
+        {
             spawn_pellet(pickup_bad, bad_pellets);
         }
     }

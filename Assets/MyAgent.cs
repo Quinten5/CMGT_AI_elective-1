@@ -12,8 +12,6 @@ public class MyAgent : Agent
     public float forceMultiplier = 10f;
     public int n_steps_per_run = 3000;
 
-    // [Range(1, 50)]
-    // public int arena_extents = 1;
     private int epoch;
 
     void Start()
@@ -61,7 +59,7 @@ public class MyAgent : Agent
 
         float penalty_for_not_moving = 1 - Mathf.Max(0f, actionBuffers.ContinuousActions[0]);
         // print("penalty: " + penalty_for_not_moving);
-        AddReward(-.05f * penalty_for_not_moving);
+        AddReward(0f * penalty_for_not_moving);
     }
 
     void OnCollisionEnter(Collision collision)

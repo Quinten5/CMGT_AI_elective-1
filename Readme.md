@@ -48,3 +48,16 @@ Now, navigate to this folder in your conda environment using `cd ML_agents`. You
 ![](./imgs/mlagents_learn.png)
 
 That means your setup is all correct! You can now begin training by pressing the 'play' button in Unity itself. 
+
+
+
+### FAQ
+
+
+*I get the following error: `mlagents.trainers.exception.UnityTrainerException: Previous data from this run ID was found. Either specify a new run ID, use --resume to resume this run, or use the --force parameter to overwrite existing data.` What's going on / How do I fix it?*
+
+> You were training beforehand with an identical run-id. Change your run-id in the command when you run `mlagents-learn trainer_config.yaml --run-id=YOURNAME`. If you paused or aborted your previous run, you can resume it instead by adding --force, for example: `mlagents-learn trainer_config.yaml --force --run-id=myFirstRun`.
+
+*My agent is only doing random moves and not getting any better over time. How can I improve it?*
+
+> In general terms, the agent will perform behaviours that gave it a positive reward more often, and reduce the moves that give it a negative reward. In the code (`myAgent.cs`), this is done whenever the `addReward()` function is called. Initially, all rewards are set to 0; play around with giving desired baviour positive rewards (`addReward(2f)`) and undesired behaviour negative rewards (`addReward(-2f)`).
