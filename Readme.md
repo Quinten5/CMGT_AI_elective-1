@@ -14,7 +14,7 @@ In order to get started, several things are needed:
 
  - Unity (version 2021.3 or later)
  - The `ml-agents` Unity package
- - `anaconda` (visit ==anaconda.com/download== and download the latest version)
+ - `anaconda` (visit [anaconda.com/download](https://www.anaconda.com/download) and download the latest version)
 
 Anaconda is a powerful environment / package management tool that is widely used in order to manage working with various (mostly python) packages. We will be using it to install pytorch (a python machine learning library) and other dependencies we need to run MLAgents in Unity.  
 
