@@ -42,6 +42,10 @@ pip3 install protobuf==3.20
 ```
 6. 
 ```
+pip install six
+```
+7.
+```
 mlagents-learn --help
 ```
 
