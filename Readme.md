@@ -73,7 +73,18 @@ In this case `trainer_config.yaml` contains the configuration for our reinforcem
 
 That means your setup is all correct! You can now begin training by pressing the 'play' button in Unity itself. 
 
+### Training / tuning the agent behaviour
 
+There are several moving parts in this Unity project
+
+> The GameManager allows you to spawn good (green) pellets and bad (red) pellets, and determines the arena size. These can change the environment you want the agent to operate in. 
+
+> The Agent object is where the magic happens. It has 3 vital parts:
+ - The `MyAgent.cs` C# script determines when / where / how the agent is punished or rewarded. Initially, all of the rewards are set to 0, meaning the agent doesn't get any information about what behaviour is desired or not. 
+ - The Ray Perception 3D component, which gives the agent information about the world through raycasting and tags of objects the raycasts hit. 
+ - The Behaviour Parameters component contains most information necessary for the `mlagents-learn` script to function: how many observations do you get per time step, how many actions does the agent receive from the model, and the option to use a trained model (mode about that later). For now, these settings are configured correctly and don't have to be tampered with.  
+
+If your mlagents script is done training, it will produce a `.onnx` file, which you can then drag into the Behaviour Parameters field called `Model`. This model has saved the behaviour that you have been training over time, and it allows you to save and share the trained behaviour.
 
 ### FAQ
 
