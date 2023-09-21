@@ -90,10 +90,10 @@ There are several moving parts in this Unity project
 
 If your mlagents script is done training, it will produce a `.onnx` file, which you can then drag into the Behaviour Parameters field called `Model`. This model has saved the behaviour that you have been training over time, and it allows you to save and share the trained behaviour.
 
-### FAQ
+# FAQ
 
 
-*I get the following error: `mlagents.trainers.exception.UnityTrainerException: Previous data from this run ID was found. Either specify a new run ID, use --resume to resume this run, or use the --force parameter to overwrite existing data.` What's going on / How do I fix it?*
+### *I get the following error: `mlagents.trainers.exception.UnityTrainerException: Previous data from this run ID was found. Either specify a new run ID, use --resume to resume this run, or use the --force parameter to overwrite existing data.` What's going on / How do I fix it?*
 
 > You were training beforehand with an identical run-id. Change your run-id in the command when you run 
 
@@ -112,9 +112,7 @@ Finally, if you just want to throw away your previous run and overwrite it, you 
 mlagents-learn trainer_config.yaml --force --run-id=myFirstRun
 ```
 
-
-
-*My agent is only doing random moves and not getting any better over time. How can I improve it?*
+### *My agent is only doing random moves and not getting any better over time. How can I improve it?*
 
 > In general terms, the agent will perform behaviours that gave it a positive reward more often, and reduce the moves that give it a negative reward. In the code (`myAgent.cs`), this is done whenever the `addReward()` function is called. Initially, all rewards are set to 0; play around with giving desired baviour positive rewards (`addReward(2f)`) and undesired behaviour negative rewards (`addReward(-2f)`).
 
@@ -122,3 +120,19 @@ mlagents-learn trainer_config.yaml --force --run-id=myFirstRun
 
 > If you have a Mac, you may encounter some issues with pytorch and other MLAgents dependencies. In this case, a possible workaround may be to use the `requirements.txt` file you can find on the repository in the `ML_agents` folder. To use it, run the following in your conda environment in the folder ML_agents:
 ```pip install -r requirements.txt```
+
+### *I want to use my trained model, how do I use it?*
+
+> If your training is finished, it should output a MyAgent.onnx file in the `CMGT_AI_elective/ML_agents/results/MY_RUN_ID/` folder in the location where you downloaded the repository. You can add this .onnx file to your project assets, select the `Agent` object in the `TrainingArea` object in your hierarchy, and in the Inspector drag your `.onnx` file into the 'Model' slot (see screenshot). 
+
+![](./imgs/mlagents_learn.png)
+
+If you press play now, the agent should show the behaviour it learned during training. 
+
+### *Why is my trained agent so much slower than what I saw during training?*
+
+> During training, Unity is sped up so that training can go faster than real-time; otherwise it would take a very long time for the agent to train - this is expected behaviour!
+
+### *My training is taking ages, how can I speed it up?*
+
+> By default, the training lasts for 100.000 training episodes. You can configure this by editing the `trainer_config.yaml` file, and changing the `max_steps` parameter to a smaller number. If you want more frequent updates on the training itself, you can reduce the `summary_freq` field to a lower number. 
