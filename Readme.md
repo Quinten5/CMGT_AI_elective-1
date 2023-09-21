@@ -125,7 +125,7 @@ If you have a Mac, you may encounter some issues with pytorch and other MLAgents
 
 If your training is finished, it should output a MyAgent.onnx file in the `CMGT_AI_elective/ML_agents/results/MY_RUN_ID/` folder in the location where you downloaded the repository. You can add this .onnx file to your project assets, select the `Agent` object in the `TrainingArea` object in your hierarchy, and in the Inspector drag your `.onnx` file into the 'Model' slot (see screenshot). 
 
-![](./imgs/mlagents_learn.png)
+![](./imgs/use_trained_behaviour.png)
 
 If you press play now, the agent should show the behaviour it learned during training. 
 
