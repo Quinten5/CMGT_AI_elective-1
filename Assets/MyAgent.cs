@@ -75,13 +75,13 @@ public class MyAgent : Agent
                 Destroy(collision.gameObject);
                 break;
             case "Wall":
-                AddReward(0f);
+                AddReward(-10f);
                 transform.localPosition = Vector3.zero;
                 GameManager.Instance.spawn_pellets();
                 EndEpisode();
                 break;
             case "Target":
-                AddReward(0f);
+                AddReward(30f);
                 GameManager.Instance.spawn_pellets();
                 EndEpisode();
                 break;

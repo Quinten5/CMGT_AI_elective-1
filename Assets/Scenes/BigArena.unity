@@ -269,6 +269,14 @@ PrefabInstance:
       propertyPath: arena_extents
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2496510462616372974, guid: 7f5ae66aa3d66cb4ba24b858557fa68d, type: 3}
+      propertyPath: n_pickups_bad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496510462616372974, guid: 7f5ae66aa3d66cb4ba24b858557fa68d, type: 3}
+      propertyPath: n_pickups_good
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3030439751633100319, guid: 7f5ae66aa3d66cb4ba24b858557fa68d, type: 3}
       propertyPath: m_TagString
       value: Wall
@@ -292,7 +300,7 @@ PrefabInstance:
     - target: {fileID: 3878215995151658522, guid: 7f5ae66aa3d66cb4ba24b858557fa68d, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5022602860645237092, guid: 49c4b810222b71441b1e6ef28f9fa359, type: 3}
     - target: {fileID: 3878215995151658522, guid: 7f5ae66aa3d66cb4ba24b858557fa68d, type: 3}
       propertyPath: m_BehaviorName
       value: MyAgent

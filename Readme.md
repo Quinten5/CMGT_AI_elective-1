@@ -101,11 +101,18 @@ If your mlagents script is done training, it will produce a `.onnx` file, which 
 mlagents-learn trainer_config.yaml --run-id=YOURNAME
 ```
 
-If you paused or aborted your previous run, you can resume it instead by adding --force, for example: 
+If you paused or aborted your previous run, you can resume it instead by adding --resume, for example: 
 
+```
+mlagents-learn trainer_config.yaml --resume --run-id=myFirstRun
+```
+
+Finally, if you just want to throw away your previous run and overwrite it, you can do so by using the `--force` parameter as such:
 ```
 mlagents-learn trainer_config.yaml --force --run-id=myFirstRun
 ```
+
+
 
 *My agent is only doing random moves and not getting any better over time. How can I improve it?*
 
